@@ -10,7 +10,7 @@ use Symfony\Component\Dotenv\Dotenv;
 $environmentFile = __DIR__ . '/.env';
 if (file_exists($environmentFile)) {
     $environmentSettings = new Dotenv();
-    $environmentSettings->loadEnv();
+    $environmentSettings->loadEnv($environmentFile);
 } else {
     die('Failed attempt to read .env file. Please create a one and fill all environment variables.');
 }
