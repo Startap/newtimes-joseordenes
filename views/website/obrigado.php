@@ -42,7 +42,7 @@
     </div>
 
     <div class="button-telegram-container">
-        <a href="https://t.me/joseordenes" id="btn-href" target="_blank">
+        <a href="https://t.me/ordenesjosem" id="btn-href" target="_blank">
         <span id="telegram-button">ENTRAR NO GRUPO</span>
 </a>
     </div>
