@@ -10,21 +10,12 @@
 
 <section id="background-1">
     <div id="header-bar">
-        <img id="icon-1" src="assets/images/@icon__Broadcast.svg"  width="40px" height="40px" alt="" >
+        <img id="icon-1" src="assets/images/icon__Broadcast.svg"  width="40px" height="40px" alt="" >
         <p id="description-icon-1">Aulas ao vivo</p>
     </div>
     
-    <h1 id="title-1">Seja um FISIOTERAPEUTA expert</p>
-    <h2 id="subtitle-1">
-        Aprenda como se tornar um fisioterapeuta Expert e aumente seus clientes sendo mais efetivo, quebrando velhos paradigmas da fisioterapia.
-    </h2>
-
-    <p id="subtitle-2">
-        Inscreva-se agora e seja avisado das melhores aulas para aprender algo
-        muito além do básico, aumentar seus clientes na fisioterapia e ter sucesso 
-        profissional!
-    </p>
-
+    <h1 id="title-1">Seja um FISIOTERAPEUTA Expert</h1>
+    
     <div id="box-agradecimento">
         <div class="box-header">
             <h2>Obrigado por se inscrever</h2>
