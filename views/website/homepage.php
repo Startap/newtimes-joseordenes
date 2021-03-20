@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 /**
  * This is the homepage layout. All content placed here we'll be displayed when the user
  * calls '/' at browser. Since we have a backend framework it's not needed to import
@@ -12,27 +13,24 @@
 -->
 <section id="background-1">
     <div id="header-bar">
-        <img id="icon-1" src="assets/images/@icon__Broadcast.svg"  width="40px" height="40px" alt="" >
+        <img id="icon-1" src="assets/images/icon_broadcast.svg" width="40px" height="40px" alt="">
         <p id="description-icon-1">Aulas ao vivo</p>
     </div>
-    
-    <h1 id="title-1">Seja um FISIOTERAPEUTA expert</p>
-    <h2 id="subtitle-1">
-        Aprenda como se tornar um fisioterapeuta Expert e aumente seus clientes sendo mais efetivo, quebrando velhos paradigmas da fisioterapia.
-    </h2>
 
-    <p id="subtitle-2">
-        Inscreva-se agora e seja avisado das melhores aulas para aprender algo
-        muito além do básico, aumentar seus clientes na fisioterapia e ter sucesso 
-        profissional!
-    </p>
+    <h1 id="title-1">SEMANA FISIOTERAPEUTA EXPERT</p>
+        <h2 id="subtitle-1">
+            Domine a Terapia Manual, seja mais efetivo nos seus tratamentos e aumente em até 3x seus clientes.
+        </h2>
 
-    <div id="form">
-        <div 
-            role="main" 
-            id="newtimes-formulario-leads-page-9cc80504cb28de1971aa">
+        <div id="form">
+            <div id="form__callout">
+                <h3>GRATUITO - De 05 a 09 de abril</h3>
+                <span>Para participar, preencha os campos abaixo e, em seguida, siga as instruções para entrar no Grupo Vip e ter acesso às aulas</span>
+            </div>
+
+            <div role="main" id="newtimes-formulario-leads-page-9cc80504cb28de1971aa">
+            </div>
         </div>
-    </div>
 </section>
 
 <section id="background-2">
@@ -40,7 +38,7 @@
         <div class="object-text-content">
             <p class="title-global-1">O que eu vou aprender nessas aulas?</p>
             <p class="text-global-1">
-                Você vai aprender sobre como agregar valor ao seu atendimento, sendo mais efetivo nos tratamentos dos seus pacientes. 
+                Você vai aprender sobre como agregar valor ao seu atendimento, sendo mais efetivo nos tratamentos dos seus pacientes.
                 Resolvendo problemas em menor tempo e com mais eficácia, seu consultório ficará cheio e o valor da sua consulta vai aumentar!
             </p>
         </div>
@@ -67,24 +65,24 @@
 </section>
 
 <section id="background-3">
-    <div id="top-scene3">  
+    <div id="top-scene3">
         <section id="mid-separadores">
             <div id="box-1" class="box">
                 <p class="text-global-3">
                     Busque o sucesso profissional com quem já tem resultados.
                 </p>
-            </div>            
+            </div>
             <div id="box-2" class="box">
                 <p class="text-global-3">
-                    Aulas atualizadas, baseadas 100% em evidências cientificas, 
-                    técnicas e conteúdos práticos para se tornar um 
+                    Aulas atualizadas, baseadas 100% em evidências cientificas,
+                    técnicas e conteúdos práticos para se tornar um
                     FISIOTERAPEUTA EXPERT.
                 </p>
-            </div>        
-            <div id="box-3"  class="box">
+            </div>
+            <div id="box-3" class="box">
                 <p class="text-global-3">
-                    Conhecimento tirado direto da "prática", com milhares de 
-                    atendimentos e treinamentos realizados nacional e 
+                    Conhecimento tirado direto da "prática", com milhares de
+                    atendimentos e treinamentos realizados nacional e
                     internacionalmente.
                 </p>
             </div>
@@ -97,7 +95,7 @@
         <img id="photo-perfil" src="assets/images/DrJoseOrdenes.png" alt="" srcset="">
     </div>
 
-    <div id="right-2">   
+    <div id="right-2">
         <h2 id="title-profissional">Quem é o profissional por trás disso tudo?</h2>
         <p id="name-profissional">Dr. José Ordenes</p>
         <p id="about-profissional">
@@ -109,13 +107,13 @@
     </div>
 </section>
 
-<?php 
+<?php
 /** Last call to action button */
 ?>
 <section id="footer">
     <p id="title-footer">Se você leu até aqui é porque o conteúdo te interessa!</p>
     <p id="subtitle-footer">Faça sua inscrição agora! É fácil, simples e rápido!</p>
-    
+
     <!-- TODO Change this to send user back to top of page -->
     <span id="btn" type="button">QUERO SER EXPERT</span>
 </section>

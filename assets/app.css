@@ -47,7 +47,7 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  background: url("images/background-photo-1.png") center no-repeat;
+  background: rgba(0, 0, 0, 0.7) url("images/background-photo-1.png") center no-repeat;
   background-blend-mode: darken, luminosity;
   background-size: cover;
   opacity: 0.5;
@@ -57,11 +57,12 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: fit-content;
-  margin: auto;
+  width: 100%;
   align-items: center;
-  margin-top: 15px;
   gap: 20px;
+  padding: 10px 0;
+  background: white;
+  box-shadow: 0 5px 15px -10px #222;
 }
 
 #description-icon-1 {
@@ -83,7 +84,7 @@ body {
   line-height: 44px;
   text-align: center;
   color: #f5f5f5;
-  margin: 1em 0;
+  margin: 1em 0 0.2em 0;
 }
 
 #subtitle-1 {
@@ -94,12 +95,11 @@ body {
   line-height: 24px;
   text-align: center;
   color: #f5f5f5;
-  max-width: 1000px;
+  max-width: 700px;
   margin: auto;
 }
 
 #subtitle-1::after {
-  content: "";
   width: 100%;
   height: 4px;
   display: block;
@@ -121,9 +121,12 @@ body {
 }
 
 #form {
-  width: 30%;
-  min-width: 350px;
-  margin: 4% auto auto auto;
+  max-width: 450px;
+  margin: 2em auto 2.5em auto;
+  background: white;
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding: 10px 35px;
 }
 
 /**
@@ -471,7 +474,7 @@ footer {
 #rd-section-kl02258o input {
   height: 60px !important;
   border-radius: 8px !important;
-  background: #F5F5F5;
+  background: #EEE;
   box-shadow: 0px 100px 80px rgba(13, 74, 129, 0.0217013), 0px 48.2934px 29.2013px rgba(13, 74, 129, 0.0310596), 0px 23.0927px 14.1767px rgba(13, 74, 129, 0.0389404), 0px 10.5941px 6.94968px rgba(13, 74, 129, 0.0482987), 0px 3.87424px 2.74791px rgba(13, 74, 129, 0.07);
   font-family: Poppins !important;
   text-align: center;
@@ -501,9 +504,13 @@ footer {
 
 #rd-form-kl02258v .bricks-form__label {
   font-size: 0.8em;
-  font-variant: small-caps;
-  color: #F5F5F5 !important;
-  text-align: center;
+  font-family: Poppins, Arial !important;
+  color: #222 !important;
+  text-align: left;
+}
+
+#rd-form-kl02258v .bricks-form__input {
+  background: #EEE !important;
 }
 
 #box-agradecimento {
@@ -629,3 +636,33 @@ background: linear-gradient(180deg, rgba(23,81,133,1) 0%, rgba(13,74,129,1) 35%,
       margin-bottom: 2em;
     }
   }
+
+
+#form__callout h3 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Poppins;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  color: #0d4a81;
+  position: relative;
+}
+
+#form__callout h3::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 3px;
+  background: #0d4a81;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: block;
+  bottom: -5px;
+}
+
+#form__callout span {
+  font-family: Poppins;
+  font-size: 0.8em;
+  font-weight: normal;
+}
