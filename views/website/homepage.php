@@ -19,7 +19,7 @@
 
     <h1 id="title-1">SEMANA FISIOTERAPEUTA EXPERT</p>
         <h2 id="subtitle-1">
-            Domine a Terapia Manual, seja mais efetivo nos seus tratamentos e aumente em até 3x seus clientes.
+            Domine a Terapia Manual sendo mais efetivo nos seus tratamentos e aumente em até 3x seu faturamento
         </h2>
 
         <div id="form">
