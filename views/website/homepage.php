@@ -43,7 +43,6 @@
             </p>
         </div>
         <div class="image-container">
-            <!-- TODO Export new image without shadow and apply it via CSS -->
             <img id="image-illustration" src="assets/images/physio__01.svg" alt="physio_01">
         </div>
     </section>
@@ -58,7 +57,6 @@
             </p>
         </div>
         <div class="image-container">
-            <!-- TODO Export new image without shadow and apply it via CSS -->
             <img id="image-illustration" src="assets/images/physio__02.svg" alt="physio_02" srcset="">
         </div>
     </section>
@@ -114,7 +112,6 @@
     <p id="title-footer">Se você leu até aqui é porque o conteúdo te interessa!</p>
     <p id="subtitle-footer">Faça sua inscrição agora! É fácil, simples e rápido!</p>
 
-    <!-- TODO Change this to send user back to top of page -->
     <span id="btn" type="button">QUERO SER EXPERT</span>
 </section>
 
