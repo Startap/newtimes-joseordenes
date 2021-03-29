@@ -10,7 +10,7 @@
 
 <section id="background-1">
     <div id="header-bar">
-        <img id="icon-1" src="assets/images/icon__Broadcast.svg"  width="40px" height="40px" alt="" >
+        <img id="icon-1" src="/assets/images/icon_broadcast.svg"  width="40px" height="40px" alt="" >
         <p id="description-icon-1">Aulas ao vivo</p>
     </div>
     
