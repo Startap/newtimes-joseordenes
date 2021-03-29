@@ -16,7 +16,7 @@
     
     <h1 id="title-1">Seja um FISIOTERAPEUTA Expert</h1>
     
-    <div id="box-agradecimento">
+    <!-- <div id="box-agradecimento">
         <div class="box-header">
             <h2>Obrigado por se inscrever</h2>
         </div>
@@ -30,11 +30,11 @@
                 <p>Você também pode entrar para nosso canal do <b>Telegram</b> e ser avisado das novidades.</p>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div class="button-telegram-container">
+    <!-- <div class="button-telegram-container">
         <a href="https://t.me/ordenesjosem" id="btn-href" target="_blank">
-        <span id="telegram-button">ENTRAR NO GRUPO</span>
-</a>
-    </div>
+            <span id="telegram-button">ENTRAR NO GRUPO</span>
+        </a>
+    </div> -->
 </section>
