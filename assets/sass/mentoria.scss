@@ -238,3 +238,18 @@ strong {
         background-position: -2em -2em;
     }
 }
+
+#course-modules-container {
+    padding-bottom: 3em;
+}
+
+#course-cards-wrapper {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(3, 30%);
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    max-width: 1500px;
+    grid-row-gap: 1em;
+}
+
