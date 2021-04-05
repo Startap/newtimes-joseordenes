@@ -12,20 +12,24 @@
 
     $processedModules = [];
     $moduleDiv = <<<ModuleDiv
-        <article class="module-card">
-            <div class="card-front">
-                <h2 class="title">%moduleTitle</h2>
-                <p class="short-description">%shortDescription<p>
-            </div>
+        <article class="card">
+            <div class="flip-card">
+                <div class="card__side card__side--front" data-key="%dataKey">
+                    <h2 class="title">%moduleTitle</h2>
+                    <p class="short-description">%shortDescription</p>
+                </div>
 
-            <div class="card-back">
-                <p class="long-description">%description</p>
+                <div class="card__side card__side--back" data-key="%dataKey">
+                    <h2 class="title">%moduleTitle</h2>
+                    <p class="long-description">%description</p>
+                </div>
             </div>
         </article>
     ModuleDiv;
 
     foreach ($modulesArray as $key => $module) {
         $currentModule = str_replace('%moduleTitle', $module['title'], $moduleDiv);
+        $currentModule = str_replace('%dataKey', ($key+1), $currentModule);
         $currentModule = str_replace('%shortDescription', $module['short-description'], $currentModule);
         $currentModule = str_replace('%description', $module['description'], $currentModule);
 
