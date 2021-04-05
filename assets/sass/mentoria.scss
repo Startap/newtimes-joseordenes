@@ -131,6 +131,12 @@ strong {
         margin: 1em auto 1em auto;
         font-weight: bold;
         font-size: 1.2em;
+
+        @media screen and (max-width: 768px) {
+            font-size: 1.0em;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
     }
 }
 
@@ -254,6 +260,10 @@ strong {
     max-width: 1500px;
     grid-row-gap: 1em;
 
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+
     .title {
         font-variant: all-small-caps;
     }
@@ -263,7 +273,7 @@ strong {
 #course-cards-wrapper .card {
     background: transparent;
     width: 90%;
-    height: 200px;
+    height: 250px;
     perspective: 1000px;
     border-radius: 10px;
     margin: auto;
@@ -280,6 +290,7 @@ strong {
         .card__side--front, 
         .card__side--back {
             position: absolute;
+            overflow-x: hidden;
             height: 100%;
             width: 100%;
             -webkit-backface-visibility: hidden;
@@ -291,6 +302,7 @@ strong {
                 position: absolute;
                 left: -10px;
                 top: 10px;
+                overflow: hidden;
                 content: attr(data-key);
                 font-family: $fontSansSerifRounded;
                 font-size: 10rem;
@@ -324,6 +336,7 @@ strong {
 
     p.short-description,
     p.long-description {
+        line-height: 120%;
         padding: 2em 45px;
         font-family: "Poppins";
         box-sizing: border-box;
@@ -333,5 +346,34 @@ strong {
 
     p.long-description {
         font-size: 0.9rem;
+    }
+}
+
+#faq-items-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .faq-card{
+        box-sizing: border-box;
+        padding: 20px 25px;
+        
+        &:not(:last-of-type) {
+            max-width: 700px;
+            margin-bottom: 1em;
+        }
+    }
+}
+
+#instructor-container #perfil-profissional {
+    margin-top: 0;
+
+    #about-profissional {
+        max-width: 500px;
+    }
+
+    p#name-profissional {
+        font-size: 1.15em;
+        line-height: 130%;
     }
 }
