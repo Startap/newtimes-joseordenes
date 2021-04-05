@@ -289,13 +289,13 @@ strong {
 
             &:after {
                 position: absolute;
-                left: 20px;
+                left: -10px;
                 top: 10px;
                 content: attr(data-key);
                 font-family: $fontSansSerifRounded;
                 font-size: 10rem;
                 color: $colorLight;
-                opacity: 15%;
+                opacity: 10%;
                 text-align: left;
                 transform: skew(-10deg, 0deg);
             }
@@ -304,6 +304,7 @@ strong {
         .card__side--front {
             color: $colorLight;
             background: $colorPrimary;
+            background: linear-gradient(45deg, #0D3A81 0%, #0D5281 100%);
         }
 
         .card__side--back {
@@ -319,5 +320,18 @@ strong {
 
     &:hover .flip-card {
         transform: rotateY(180deg);
+    }
+
+    p.short-description,
+    p.long-description {
+        padding: 2em 45px;
+        font-family: "Poppins";
+        box-sizing: border-box;
+        font-weight: 400;
+        font-size: 1em;
+    }
+
+    p.long-description {
+        font-size: 0.9rem;
     }
 }

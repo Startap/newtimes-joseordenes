@@ -1,13 +1,40 @@
 <?php
     $modulesArray = [
-        [ 'title' => 'Módulo I', 'short-description' => '', 'description' => '' ],
-        [ 'title' => 'Módulo II', 'short-description' => '', 'description' => '' ],
-        [ 'title' => 'Módulo III', 'short-description' => '', 'description' => '' ],
-        [ 'title' => 'Módulo IV', 'short-description' => '', 'description' => '' ],
-        [ 'title' => 'Módulo V', 'short-description' => '', 'description' => '' ],
-        [ 'title' => 'Módulo VI', 'short-description' => '', 'description' => '' ],
-        [ 'title' => 'Módulo VII', 'short-description' => '', 'description' => '' ],
-        [ 'title' => 'Módulo VII', 'short-description' => '', 'description' => '' ]
+        [ 
+            'title' => 'Módulo I', 
+            'short-description' => 'Anatomia, fisiologia e biomecânica como a faculdade não ensina', 
+            'description' => 'Uma descrição mais longa, com mais palavras e mais elaboradas que a descrição curta, para introduzir ao cliente o conteúdo do módulo atual. Assim temos como mostrar mais informações ao navegante.' 
+        ],
+        [ 
+            'title' => 'Módulo II', 
+            'short-description' => 'Entenda os princípios da reabilitação através do exclusivo módulo ADT', 
+            'description' => 'Uma descrição mais longa, com mais palavras e mais elaboradas que a descrição curta, para introduzir ao cliente o conteúdo do módulo atual. Assim temos como mostrar mais informações ao navegante.' 
+        ],
+        [ 
+            'title' => 'Módulo III', 
+            'short-description' => 'Avaliação, diagnóstico e tratamento das principais patologias da coluna lombar e pelve', 
+            'description' => 'Uma descrição mais longa, com mais palavras e mais elaboradas que a descrição curta, para introduzir ao cliente o conteúdo do módulo atual. Assim temos como mostrar mais informações ao navegante.' 
+        ],
+        [ 
+            'title' => 'Módulo IV', 
+            'short-description' => 'Entenda melhor a coluna cervical e torácica e tenha maior efetividade no seu tratamento', 
+            'description' => 'Uma descrição mais longa, com mais palavras e mais elaboradas que a descrição curta, para introduzir ao cliente o conteúdo do módulo atual. Assim temos como mostrar mais informações ao navegante.' 
+        ],
+        [ 
+            'title' => 'Módulo V', 
+            'short-description' => 'Conceitos básicos e práticos da reabilitação dos membros superiores por completo',
+            'description' => 'Uma descrição mais longa, com mais palavras e mais elaboradas que a descrição curta, para introduzir ao cliente o conteúdo do módulo atual. Assim temos como mostrar mais informações ao navegante.' 
+        ],
+        [ 
+            'title' => 'Módulo VI', 
+            'short-description' => 'Saiba a importância da interligação entre quadril, joelho e tornozelos', 
+            'description' => 'Uma descrição mais longa, com mais palavras e mais elaboradas que a descrição curta, para introduzir ao cliente o conteúdo do módulo atual. Assim temos como mostrar mais informações ao navegante.' 
+        ],
+        [ 
+            'title' => 'Módulo VII', 
+            'short-description' => 'Entenda a importância e conheça mais sobre a anatomia e biomecânica da ATM', 
+            'description' => 'Uma descrição mais longa, com mais palavras e mais elaboradas que a descrição curta, para introduzir ao cliente o conteúdo do módulo atual. Assim temos como mostrar mais informações ao navegante.' 
+        ],
     ];
 
     $processedModules = [];
