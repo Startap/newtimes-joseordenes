@@ -3,37 +3,37 @@
         [ 
             'title' => 'Módulo I', 
             'short-description' => 'Anatomia, fisiologia e biomecânica como a faculdade não ensina', 
-            'description' => 'Uma descrição mais longa, com mais palavras e mais elaboradas que a descrição curta, para introduzir ao cliente o conteúdo do módulo atual. Assim temos como mostrar mais informações ao navegante.' 
+            'description' => 'Saiba mais sobre a função muscular, óssea e nervosa que comanda e dirige a nossa reabilitação. Entenda o processo de movimento humano, de lesão tissular e como o SNC comanda tudo. Compreenda as técnicas de mobilização e manipulação e seus efeitos.' 
         ],
         [ 
             'title' => 'Módulo II', 
             'short-description' => 'Entenda os princípios da reabilitação através do exclusivo módulo ADT', 
-            'description' => 'Uma descrição mais longa, com mais palavras e mais elaboradas que a descrição curta, para introduzir ao cliente o conteúdo do módulo atual. Assim temos como mostrar mais informações ao navegante.' 
+            'description' => 'Entenda os princípios de uma boa efetividade clínica e uso correto dos testes ortopédicos. Obtenha uma linha de raciocínio perfeita para conduzir avaliações e tratamentos. Aprenda os 7 princípios da avaliação clínica e a importância de cada um deles no tratamento.' 
         ],
         [ 
             'title' => 'Módulo III', 
             'short-description' => 'Avaliação, diagnóstico e tratamento das principais patologias da coluna lombar e pelve', 
-            'description' => 'Uma descrição mais longa, com mais palavras e mais elaboradas que a descrição curta, para introduzir ao cliente o conteúdo do módulo atual. Assim temos como mostrar mais informações ao navegante.' 
+            'description' => 'Explore e reflita sobre conceitos básicos de anatomia e biomecânica, além de entender seu impacto funcional, social e econômico. Muito além dos exames, entenda conceitos de Dor Irradiada, Dor Glútea profunda e dores lombares diversas.' 
         ],
         [ 
             'title' => 'Módulo IV', 
             'short-description' => 'Entenda melhor a coluna cervical e torácica e tenha maior efetividade no seu tratamento', 
-            'description' => 'Uma descrição mais longa, com mais palavras e mais elaboradas que a descrição curta, para introduzir ao cliente o conteúdo do módulo atual. Assim temos como mostrar mais informações ao navegante.' 
+            'description' => 'Entenda os principais conceitos de uma das etapas mais importantes: a avaliação. Desde o entendimento da eficácia de um teste até o reconhecimento de bandeiras vermelhas. As melhores técnicas para um tratamento seguro e eficaz, controlando a dor do paciente.' 
         ],
         [ 
             'title' => 'Módulo V', 
             'short-description' => 'Conceitos básicos e práticos da reabilitação dos membros superiores por completo',
-            'description' => 'Uma descrição mais longa, com mais palavras e mais elaboradas que a descrição curta, para introduzir ao cliente o conteúdo do módulo atual. Assim temos como mostrar mais informações ao navegante.' 
+            'description' => 'Aprenda a avaliar de forma simples e assertiva, com um raciocínio clínico focado no cerne do problema. Trate a dor e devolva a função ao paciente em poucas seções.  Treine seu paciente e desenvolva a auto-eficácia para maior rotatividade de pacientes.' 
         ],
         [ 
             'title' => 'Módulo VI', 
             'short-description' => 'Saiba a importância da interligação entre quadril, joelho e tornozelos', 
-            'description' => 'Uma descrição mais longa, com mais palavras e mais elaboradas que a descrição curta, para introduzir ao cliente o conteúdo do módulo atual. Assim temos como mostrar mais informações ao navegante.' 
+            'description' => 'Aprenda de forma simples a tratar as principais patologias dos membros inferiores, sem invenções ou técnicas que não tem comprovação científica. Conheça todos os aspectos para elaborar o tratamento de forma individual.' 
         ],
         [ 
             'title' => 'Módulo VII', 
             'short-description' => 'Entenda a importância e conheça mais sobre a anatomia e biomecânica da ATM', 
-            'description' => 'Uma descrição mais longa, com mais palavras e mais elaboradas que a descrição curta, para introduzir ao cliente o conteúdo do módulo atual. Assim temos como mostrar mais informações ao navegante.' 
+            'description' => 'Explore e entenda a complexidade das condições relacionadas à articulação temporomandibular. Desenvolva as habilidades para tratar as DTMs, promovendo alívio e controle de sinais sem usar de procedimentos invasivos.' 
         ],
     ];
 
