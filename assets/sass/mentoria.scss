@@ -133,7 +133,7 @@ strong {
         font-size: 1.2em;
 
         @media screen and (max-width: 768px) {
-            font-size: 1.0em;
+            font-size: 1em;
             padding: 0 20px;
             box-sizing: border-box;
         }
@@ -210,9 +210,9 @@ strong {
     font-family: $fontPrimary;
     font-size: 1.2rem;
     color: $colorPrimary;
-    
+
     background: #fff;
-    box-shadow: 0px 0px 30px -4px #22222240;
+    box-shadow: 0px 9px 30px -8px #22222240;
 
     margin: 2rem auto;
     border-radius: 10px;
@@ -229,11 +229,11 @@ strong {
     }
 
     &::after {
-        content: '';
+        content: "";
         position: absolute;
         left: 0;
         bottom: 0;
-        background: url('https://api.iconify.design/uil:heart-medical.svg?color=%230d4a8140') no-repeat -3em top / contain;
+        background: url("https://api.iconify.design/uil:heart-medical.svg?color=%230d4a8140") no-repeat -3em top / contain;
         width: 100%;
         height: 100%;
         z-index: 1;
@@ -254,14 +254,18 @@ strong {
 #course-cards-wrapper {
     display: grid;
     grid-auto-flow: row;
-    grid-template-columns: repeat(3, 30%);
+    grid-template-columns: repeat(3, 1fr);
     box-sizing: border-box;
     justify-content: space-evenly;
     max-width: 1500px;
     grid-row-gap: 1em;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
         grid-template-columns: 1fr;
+    }
+
+    @media screen and (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .title {
@@ -287,7 +291,7 @@ strong {
         transform-style: preserve-3d;
         border-radius: 10px;
 
-        .card__side--front, 
+        .card__side--front,
         .card__side--back {
             position: absolute;
             overflow-x: hidden;
@@ -316,7 +320,7 @@ strong {
         .card__side--front {
             color: $colorLight;
             background: $colorPrimary;
-            background: linear-gradient(45deg, #0D3A81 0%, #0D5281 100%);
+            background: linear-gradient(45deg, #0d3a81 0%, #0d5281 100%);
         }
 
         .card__side--back {
@@ -349,22 +353,6 @@ strong {
     }
 }
 
-#faq-items-wrapper {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-
-    .faq-card{
-        box-sizing: border-box;
-        padding: 20px 25px;
-        
-        &:not(:last-of-type) {
-            max-width: 700px;
-            margin-bottom: 1em;
-        }
-    }
-}
-
 #instructor-container #perfil-profissional {
     margin-top: 0;
 
@@ -373,7 +361,104 @@ strong {
     }
 
     p#name-profissional {
-        font-size: 1.15em;
+        font-size: 1.5em;
         line-height: 130%;
+    }
+}
+
+#testimonial-container h2 {
+    font-family: "Poppins";
+    font-weight: normal;
+    font-size: 1em;
+}
+
+#faq-items-wrapper {
+    $faqClosedIcon: '/assets/images/faq_open.svg';
+    $faqOpenedIcon: '/assets/images/faq_close.svg';
+    $faqHoveredIcon: '/assets/images/faq_hovered.svg';
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .faq-card {
+        box-sizing: border-box;
+        max-width: 700px;
+        margin: 0 auto;
+        border-radius: 5px 50px 0 0;
+
+        &:not(:last-of-type) {
+            margin-bottom: 1em;
+        }
+
+        &:hover {
+            .faq-question span::before {
+                background: url($faqHoveredIcon) no-repeat left center / 1.5em;
+            }
+        }
+    }
+
+    .faq-question {
+        box-sizing: border-box;
+        font-family: "Comfortaa";
+        font-weight: bold;
+        background: linear-gradient(45deg, #062d50 60%, #0d5281 200%);
+        //$colorPrimary;
+        padding: 1em 2em 1em 3em;
+        color: white;
+        font-size: 0.9em;
+        cursor: help;
+
+        span {
+            position: relative;
+            display: block;
+
+            &:before {
+                position: absolute;
+                content: "";
+                width: 2em;
+                height: 2em;
+                background: url($faqClosedIcon) no-repeat left center / 1.5em;
+                left: -2.3em;
+                top: -.5em;
+                transition: all 0.4s ease-in-out;
+                transform-origin: center center;
+            }
+        }
+    }
+
+    .faq-answer {
+        box-sizing: border-box;
+        cursor: default;
+
+        max-height: 0;
+        overflow: hidden;
+
+        border: 3px solid #0d4a81;
+        border-top: none;
+        font-family: "Poppins";
+        font-size: 0.9em;
+        line-height: 150%;
+        transition: all 0.3s ease-in-out;
+
+        span {
+            padding: 1em;
+            display: block;
+            box-sizing: border-box;
+        }
+    }
+
+    .faq-opened {
+        .faq-question { left: 1em; }
+
+        .faq-question span::before {
+            background: url($faqOpenedIcon) no-repeat left center / 1.5em;
+        }
+
+        &:hover {
+            .faq-question span::before {
+                background: url($faqOpenedIcon) no-repeat left center / 1.5em;
+            }
+        }
     }
 }
