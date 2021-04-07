@@ -85,9 +85,7 @@ strong {
             transition: all 0.3s ease;
 
             @media screen and (max-width: 769px) {
-                background-size: 1em;
-                width: 1em;
-                height: 1em;
+                display: none;
             }
         }
 
@@ -266,11 +264,11 @@ strong {
     max-width: 1500px;
     grid-row-gap: 1em;
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 769px) {
         grid-template-columns: 1fr;
     }
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (min-width: 770px) and (max-width: 1024px) {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -378,6 +376,10 @@ strong {
     }
 
     @media screen and (max-width: 769px) {
+        #photo-perfil {
+            margin-bottom: 1em;
+        }
+
         #right-2,
         #about-profissional {
             margin: auto;
@@ -404,6 +406,11 @@ strong {
     width: 100%;
     display: flex;
     flex-direction: column;
+
+    @media screen and (max-width: 769px) {
+        width: 90%;
+        margin: auto;
+    }
 
     .faq-card {
         box-sizing: border-box;
@@ -494,6 +501,11 @@ strong {
     justify-content: space-evenly;
     grid-template: repeat(2, 1fr) / repeat(3, 1fr);
 
+    @media screen and (max-width: 769px) { 
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;        
+    }
+
     li {
         box-sizing: border-box;
         width: 90%;
@@ -529,13 +541,6 @@ strong {
         z-index: 1;
     }
 }
-
-// TODO 1 - Modo mobile de cards do conteudo e cards de bonus precisam ser revistos
-// principalmente em resoluções abaixo de 768px
-
-// TODO 2 - FAQ precisa de espaçamento lateral em resoluções abaixo de 768px
-
-// TODO 3 - Eliminar o ícone de título em dispositivos abaixo de 768px
 
 // TODO 4 - Adicionar espaçamento no nome do profissional e texto descritivo, 
 // além do espaçamento com imagem
