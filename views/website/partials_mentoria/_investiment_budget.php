@@ -6,6 +6,8 @@
     <span class="price-inactive">R$ 3.497,00 (ou 12x de 291,41)</span>
     <span class="price-active">R$ 997,00 (ou 12x de 97,14)</span>
 
-    <p class="launch-promotion"><span>Promoção de lançamento</span></p>
+    <p class="promotion-time-limited">PROMOÇÃO POR TEMPO LIMITADO</p>
+
+    <p class="launch-promotion button-sales-callout"><span>RESERVAR MINHA VAGA NO TREINAMENTO</span></p>
 </section>
 <!-- @@ Investiment :: End -->
