@@ -31,6 +31,7 @@
                         allowfullscreen></iframe>
                     </div>
                 htmlSalesVideoHtmlTemplate;
+            $htmlSalesVideoHtml = str_replace('%videoId%', '_2hB1YUErZ0', $htmlSalesVideoHtml);
             $htmlSalesVideoHtml = str_replace('%parameters', implode("&", $htmlEmbedParamenters), $htmlSalesVideoHtml);
 
             echo $htmlSalesVideoHtml;
