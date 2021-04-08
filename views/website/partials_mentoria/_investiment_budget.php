@@ -8,6 +8,8 @@
 
     <p class="promotion-time-limited">PROMOÇÃO POR TEMPO LIMITADO</p>
 
-    <p class="launch-promotion button-sales-callout"><span>RESERVAR MINHA VAGA NO TREINAMENTO</span></p>
+    <a href="<?php echo $_ENV['PRODUCT_URL']; ?>" target="_blank" rel="norel nofollow">
+        <button class="button-sales-callout">RESERVAR MINHA VAGA NA MENTORIA</button>
+    </a>
 </section>
 <!-- @@ Investiment :: End -->
