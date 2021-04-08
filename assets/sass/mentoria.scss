@@ -11,13 +11,14 @@ $colorAccent: #56d6ec;
     margin: 0;
 }
 
-strong, b {
+strong,
+b {
     display: inline;
     font-weight: bold;
 }
 
 a {
-    width: fit-content;       
+    width: fit-content;
 }
 
 .button-sales-callout {
@@ -33,6 +34,30 @@ a {
     font-size: 1.2rem;
     background: #ffff3e;
     color: $colorPrimary;
+    overflow-x: hidden;
+    position: relative;
+    box-shadow: 0 6px 40px -20px #222222;
+    transition: all 0.4s ease-in-out;
+
+    &:hover {
+        box-shadow: 0 10px 50px -10px #222222;
+
+        &:after {
+            left: 100%;
+        }
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+        transform: matrix(1, 0, -0.700208, 1, 0, 0);
+        transition: all 0.5s ease;
+    }
 
     @media screen and (max-width: 480px) {
         width: 100%;
@@ -139,7 +164,7 @@ a {
     z-index: 0;
 
     &:before {
-        content: '';
+        content: "";
         width: 100%;
         height: 100%;
         left: 0;
@@ -151,9 +176,9 @@ a {
     }
 
     &:after {
-        content: '';
+        content: "";
         background-blend-mode: luminosity;
-        background: $colorPrimary url('/assets/images/illustrations/clinic-background.png') no-repeat;
+        background: $colorPrimary url("/assets/images/illustrations/clinic-background.png") no-repeat;
         background-size: cover;
         width: 100%;
         height: 100%;
@@ -216,14 +241,17 @@ a {
         }
     }
 
-    .left-section, .right-section {
+    .left-section,
+    .right-section {
         flex-basis: 49%;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        box-sizing: border-box;
 
         @media screen and (max-width: 500px) {
             flex-basis: 100%;
+            margin-bottom: 2em;
         }
     }
 }
@@ -234,7 +262,9 @@ a {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: max-content 1fr;
 
-    h1 { grid-area: title; }
+    h1 {
+        grid-area: title;
+    }
 
     #target-illustration {
         grid-area: illustration;
@@ -258,7 +288,7 @@ a {
 
             &:after {
                 position: absolute;
-                content: '';
+                content: "";
                 width: 60%;
                 height: 10px;
                 background: linear-gradient(90deg, $colorPrimary, $colorAccent);
@@ -273,7 +303,6 @@ a {
         display: flex;
         flex-direction: column;
     }
-
 }
 
 #course-modules-container {
@@ -299,7 +328,7 @@ a {
         height: 250%;
         bottom: 0;
         right: 0;
-        background: url('/assets/images/illustrations/clinic-physio.svg') no-repeat center center/contain;
+        background: url("/assets/images/illustrations/clinic-physio.svg") no-repeat center center/contain;
         margin-top: 30px;
         position: relative;
         filter: drop-shadow(3px 7px 50px #00000040);
@@ -413,7 +442,7 @@ a {
 #instructor-container #perfil-profissional {
     margin-top: 0;
 
-    #about-profissional {        
+    #about-profissional {
         max-width: 500px;
     }
 
@@ -436,7 +465,6 @@ a {
             text-align: center;
         }
     }
-
 }
 
 #testimonial-container h2 {
@@ -446,9 +474,9 @@ a {
 }
 
 #faq-items-wrapper {
-    $faqClosedIcon: '/assets/images/faq_open.svg';
-    $faqOpenedIcon: '/assets/images/faq_close.svg';
-    $faqHoveredIcon: '/assets/images/faq_hovered.svg';
+    $faqClosedIcon: "/assets/images/faq_open.svg";
+    $faqOpenedIcon: "/assets/images/faq_close.svg";
+    $faqHoveredIcon: "/assets/images/faq_hovered.svg";
 
     width: 100%;
     display: flex;
@@ -456,7 +484,7 @@ a {
 
     @media screen and (max-width: 769px) {
         width: 90%;
-        margin: auto; 
+        margin: auto;
     }
 
     .faq-card {
@@ -498,7 +526,7 @@ a {
                 height: 2em;
                 background: url($faqClosedIcon) no-repeat left center / 1.5em;
                 left: -2.3em;
-                top: -.5em;
+                top: -0.5em;
                 transition: all 0.4s ease-in-out;
                 transform-origin: center center;
             }
@@ -527,7 +555,9 @@ a {
     }
 
     .faq-opened {
-        .faq-question { left: 1em; }
+        .faq-question {
+            left: 1em;
+        }
 
         .faq-question span::before {
             background: url($faqOpenedIcon) no-repeat left center / 1.5em;
@@ -550,9 +580,9 @@ a {
     max-width: 1500px;
     margin: auto;
 
-    @media screen and (max-width: 480px) { 
+    @media screen and (max-width: 480px) {
         grid-template-columns: 1fr;
-        grid-template-rows: auto;        
+        grid-template-rows: auto;
     }
 
     @media screen and (max-width: 1024px) {
@@ -574,7 +604,7 @@ a {
         color: $colorLight;
         font-family: $fontSansSerifRounded;
         position: relative;
-        
+
         &:before {
             position: absolute;
             width: 100%;
@@ -582,7 +612,7 @@ a {
             left: 0;
             top: 0;
             content: "";
-            background: url(https://api.iconify.design/entypo:price-ribbon.svg?color=%23f5f5f5) no-repeat -2em 1em/contain;
+            background: url(https://api.iconify.design/entypo:price-ribbon.svg?color=%23f5f5f5) no-repeat -2em 1em / contain;
             z-index: 0;
             opacity: 0.1;
         }
@@ -606,10 +636,9 @@ a {
     padding: 0 25px;
 }
 
-
 #investiment-container .price-inactive {
     text-decoration: line-through;
-    color: #FF0000;
+    color: #ff0000;
     margin: 7px 0;
     font-size: 0.9rem;
 }
@@ -664,12 +693,19 @@ a {
         z-index: 1;
 
         &:not(:last-of-type) {
-            //background: lighten($colorPrimary, 15%);
             background: #1472c6;
         }
 
+        &:hover:after {
+            background-position: 100% center;
+            transform: skewX(-10deg);
+            transform-origin: right top;
+            opacity: 0.0;
+        }
+
         &:after {
-            content: '';
+            transition: all .5s ease-in-out;
+            content: "";
             width: 100%;
             height: 100%;
             left: 0;
@@ -678,15 +714,18 @@ a {
             position: absolute;
             opacity: 0.2;
             z-index: -1;
+            background-repeat: no-repeat;
+            background-position: -10% center;
+            background-size: contain;
         }
     }
-    
+
     #panel-warning:after {
-        background: url('https://api.iconify.design/carbon:warning-hex-filled.svg?color=%230d4a81') no-repeat -2em center / contain;
+        background-image: url("https://api.iconify.design/carbon:warning-hex-filled.svg?color=%230d4a81");
     }
 
     #panel-health-professional:after {
-        background: url('https://api.iconify.design/maki:doctor-15.svg?color=%231472c6&flip=horizontal') no-repeat -2em center / contain;
+        background-image: url("https://api.iconify.design/maki:doctor-15.svg?color=%231472c6&flip=horizontal");
     }
 
     @media screen and (max-width: 768px) {
@@ -700,7 +739,7 @@ a {
             flex-direction: column;
             max-width: 700px;
             margin: 2em auto 5em auto;
-        }    
+        }
     }
 }
 
@@ -712,6 +751,10 @@ a {
     width: max-content;
     text-align: center;
     padding: 5em 0;
+
+    @media screen and (max-width: 480px) {
+        width: 90%;
+    }
 
     span {
         margin-bottom: 20px;
@@ -726,11 +769,10 @@ a {
     max-width: 1000px;
     margin: 2em auto;
     display: grid;
-    grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
     grid-auto-flow: dense;
     position: relative;
     grid-gap: 10px;
-
 
     @media screen and (max-width: 767px) {
         width: 75%;
@@ -752,7 +794,9 @@ a {
     box-shadow: 0px 10px 25px -15px #010000;
 }
 
-.iframe-video-container iframe, .iframe-video-container object, .iframe-video-container embed {
+.iframe-video-container iframe,
+.iframe-video-container object,
+.iframe-video-container embed {
     position: absolute;
     top: 0;
     left: 0;
