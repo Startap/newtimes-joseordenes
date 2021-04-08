@@ -1,0 +1,692 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+strong, b {
+  display: inline;
+  font-weight: bold;
+}
+
+a {
+  width: fit-content;
+}
+
+.button-sales-callout {
+  box-sizing: border-box;
+  width: max-content;
+  font-weight: bold;
+  font-family: "Poppins";
+  cursor: pointer;
+  padding: 1em 3em;
+  border-radius: 15px;
+  border: none;
+  line-height: 120%;
+  font-size: 1.2rem;
+  background: #ffff3e;
+  color: #0d4a81;
+}
+@media screen and (max-width: 480px) {
+  .button-sales-callout {
+    width: 100%;
+  }
+}
+
+.content-section h1 {
+  font-family: "Poppins";
+  font-variant: all-small-caps;
+  font-size: 1.9rem;
+  text-align: center;
+  margin: 3em auto 1em auto;
+  font-weight: 600;
+  letter-spacing: 1px;
+  position: relative;
+  width: fit-content;
+  color: #0d4a81;
+  cursor: default;
+}
+.content-section h1::before {
+  content: "";
+  width: 3em;
+  height: 3em;
+  left: 0;
+  position: absolute;
+  background: url("https://api.iconify.design/maki:doctor-15.svg?color=%230d4a81&flip=horizontal") no-repeat left center;
+  background-size: 2em;
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 769px) {
+  .content-section h1::before {
+    display: none;
+  }
+}
+.content-section h1::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  left: 0;
+  bottom: -9px;
+  background: #0d4a81;
+  height: 5px;
+  border-radius: 15px;
+  opacity: 0.2;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 768px) {
+  .content-section h1 {
+    width: 100%;
+  }
+  .content-section h1::before {
+    opacity: 0.2;
+  }
+}
+@media screen and (min-width: 769px) {
+  .content-section h1::before {
+    left: -2em;
+    top: -1em;
+    opacity: 0.3;
+  }
+  .content-section h1:hover::after {
+    width: 80%;
+  }
+  .content-section h1:hover::before {
+    opacity: 0.6;
+    transform: scale(1.1);
+  }
+}
+.content-section h2 {
+  font-family: "Comfortaa";
+  text-align: center;
+  max-width: 600px;
+  margin: 1em auto 1em auto;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+@media screen and (max-width: 768px) {
+  .content-section h2 {
+    font-size: 1em;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+}
+
+#first_callout {
+  height: fit-content;
+  min-height: 100vh;
+  padding: 2em 1em;
+  color: #f5f5f5;
+  box-sizing: border-box;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  position: relative;
+  z-index: 0;
+}
+#first_callout:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  opacity: 0.9;
+  background: #0d4a81;
+  z-index: -1;
+}
+#first_callout:after {
+  content: "";
+  background-blend-mode: luminosity;
+  background: #0d4a81 url("/assets/images/illustrations/clinic-background.png") no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  opacity: 1;
+  z-index: -2;
+}
+#first_callout h1,
+#first_callout h2 {
+  margin-bottom: 2rem;
+}
+#first_callout h1 {
+  font-size: 3rem;
+  font-family: "Comfortaa";
+  text-shadow: 1px 1px 1px #062d50;
+  font-weight: 700;
+}
+#first_callout h1 span {
+  text-transform: uppercase;
+  display: block;
+  text-shadow: 4px 2px 0px #082f53;
+}
+#first_callout h1 small {
+  font-size: 1.5rem;
+  display: block;
+  font-family: "Comfortaa";
+}
+#first_callout h2 {
+  font-size: 1.2em;
+  line-height: 130%;
+  font-family: "Comfortaa";
+}
+#first_callout h2 span {
+  color: #56d6ec;
+}
+@media screen and (max-width: 768px) {
+  #first_callout h1 small {
+    margin-top: 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #first_callout h1 small {
+    width: 75%;
+    max-width: 1000px;
+  }
+  #first_callout h2 {
+    width: 60%;
+    max-width: 700px;
+  }
+}
+#first_callout .left-section, #first_callout .right-section {
+  flex-basis: 49%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (max-width: 500px) {
+  #first_callout .left-section, #first_callout .right-section {
+    flex-basis: 100%;
+  }
+}
+
+#targets-container {
+  display: grid;
+  grid-template-areas: "title title" "illustration text";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: max-content 1fr;
+}
+#targets-container h1 {
+  grid-area: title;
+}
+#targets-container #target-illustration {
+  grid-area: illustration;
+}
+#targets-container #target-item {
+  grid-area: text;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#targets-container #target-item p {
+  font-size: 1.3em;
+  font-family: "Poppins";
+  font-weight: normal;
+  line-height: 150%;
+  color: #0d4a81;
+  padding: 0 2em;
+  position: relative;
+  z-index: 0;
+}
+#targets-container #target-item p:after {
+  position: absolute;
+  content: "";
+  width: 60%;
+  height: 10px;
+  background: linear-gradient(90deg, #0d4a81, #56d6ec);
+  left: 2em;
+  bottom: -1em;
+  border-radius: 15px;
+}
+@media screen and (max-width: 480px) {
+  #targets-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+#course-modules-container {
+  padding: 1em 0 2em 0;
+}
+
+#course-cards-wrapper {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(3, 1fr);
+  box-sizing: border-box;
+  justify-content: space-evenly;
+  max-width: 1500px;
+  grid-row-gap: 1em;
+  padding-bottom: 20em;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+}
+#course-cards-wrapper:after {
+  content: "";
+  width: 180%;
+  height: 250%;
+  bottom: 0;
+  right: 0;
+  background: url("/assets/images/illustrations/clinic-physio.svg") no-repeat center center/contain;
+  margin-top: 30px;
+  position: relative;
+  filter: drop-shadow(3px 7px 50px #00000040);
+}
+@media screen and (max-width: 750px) {
+  #course-cards-wrapper {
+    grid-template-columns: 1fr;
+    padding-bottom: 0;
+  }
+  #course-cards-wrapper:after {
+    width: 100%;
+    height: 20em;
+  }
+}
+@media screen and (min-width: 751px) and (max-width: 1024px) {
+  #course-cards-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+#course-cards-wrapper .title {
+  font-variant: all-small-caps;
+}
+
+#course-cards-wrapper .card {
+  background: transparent;
+  width: 90%;
+  height: 250px;
+  perspective: 1000px;
+  border-radius: 10px;
+  margin: auto;
+}
+#course-cards-wrapper .card .flip-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.4s linear;
+  transform-origin: center center;
+  transform-style: preserve-3d;
+  border-radius: 10px;
+}
+#course-cards-wrapper .card .flip-card .card__side--front,
+#course-cards-wrapper .card .flip-card .card__side--back {
+  position: absolute;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 0 10px;
+  box-shadow: 0 5px 10px -5px #0b3d6a;
+}
+#course-cards-wrapper .card .flip-card .card__side--front:after,
+#course-cards-wrapper .card .flip-card .card__side--back:after {
+  position: absolute;
+  left: -10px;
+  top: 10px;
+  overflow: hidden;
+  content: attr(data-key);
+  font-family: "Comfortaa";
+  font-size: 10rem;
+  color: #f5f5f5;
+  opacity: 10%;
+  text-align: left;
+  transform: skew(-10deg, 0deg);
+}
+#course-cards-wrapper .card .flip-card .card__side--front {
+  color: #f5f5f5;
+  background: #0d4a81;
+  background: linear-gradient(45deg, #0d3a81 0%, #0d5281 100%);
+}
+#course-cards-wrapper .card .flip-card .card__side--back {
+  color: #0d4a81;
+  background: #d5eaea;
+  transform: rotateY(180deg);
+}
+#course-cards-wrapper .card .flip-card .card__side--back:after {
+  color: #0d4a81;
+}
+#course-cards-wrapper .card:hover .flip-card {
+  transform: rotateY(180deg) scale(1.05);
+}
+#course-cards-wrapper .card:hover .flip-card .card__side--back,
+#course-cards-wrapper .card:hover .flip-card .card__side--front {
+  box-shadow: 0 7px 15px -5px #0b3d6a;
+}
+#course-cards-wrapper .card p.short-description,
+#course-cards-wrapper .card p.long-description {
+  line-height: 120%;
+  padding: 2em 45px;
+  font-family: "Poppins";
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 1em;
+}
+#course-cards-wrapper .card p.long-description {
+  font-size: 0.9rem;
+}
+
+#instructor-container #perfil-profissional {
+  margin-top: 0;
+}
+#instructor-container #perfil-profissional #about-profissional {
+  max-width: 500px;
+}
+#instructor-container #perfil-profissional p#name-profissional {
+  font-size: 1.5em;
+  line-height: 130%;
+}
+@media screen and (max-width: 769px) {
+  #instructor-container #perfil-profissional #photo-perfil {
+    margin-bottom: 1em;
+  }
+  #instructor-container #perfil-profissional #right-2,
+#instructor-container #perfil-profissional #about-profissional {
+    margin: auto;
+  }
+  #instructor-container #perfil-profissional #name-profissional {
+    text-align: center;
+  }
+}
+
+#testimonial-container h2 {
+  font-family: "Poppins";
+  font-weight: normal;
+  font-size: 1em;
+}
+
+#faq-items-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 769px) {
+  #faq-items-wrapper {
+    width: 90%;
+    margin: auto;
+  }
+}
+#faq-items-wrapper .faq-card {
+  box-sizing: border-box;
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 5px 50px 0 0;
+}
+#faq-items-wrapper .faq-card:not(:last-of-type) {
+  margin-bottom: 1em;
+}
+#faq-items-wrapper .faq-card:hover .faq-question span::before {
+  background: url("/assets/images/faq_hovered.svg") no-repeat left center/1.5em;
+}
+#faq-items-wrapper .faq-question {
+  box-sizing: border-box;
+  font-family: "Comfortaa";
+  font-weight: bold;
+  background: linear-gradient(45deg, #062d50 60%, #0d5281 200%);
+  padding: 1em 2em 1em 3em;
+  color: white;
+  font-size: 0.9em;
+  cursor: help;
+}
+#faq-items-wrapper .faq-question span {
+  position: relative;
+  display: block;
+}
+#faq-items-wrapper .faq-question span:before {
+  position: absolute;
+  content: "";
+  width: 2em;
+  height: 2em;
+  background: url("/assets/images/faq_open.svg") no-repeat left center/1.5em;
+  left: -2.3em;
+  top: -0.5em;
+  transition: all 0.4s ease-in-out;
+  transform-origin: center center;
+}
+#faq-items-wrapper .faq-answer {
+  box-sizing: border-box;
+  cursor: default;
+  max-height: 0;
+  overflow: hidden;
+  border: 3px solid #0d4a81;
+  border-top: none;
+  font-family: "Poppins";
+  font-size: 0.9em;
+  line-height: 150%;
+  transition: all 0.3s ease-in-out;
+}
+#faq-items-wrapper .faq-answer span {
+  padding: 1em;
+  display: block;
+  box-sizing: border-box;
+}
+#faq-items-wrapper .faq-opened .faq-question {
+  left: 1em;
+}
+#faq-items-wrapper .faq-opened .faq-question span::before {
+  background: url("/assets/images/faq_close.svg") no-repeat left center/1.5em;
+}
+#faq-items-wrapper .faq-opened:hover .faq-question span::before {
+  background: url("/assets/images/faq_close.svg") no-repeat left center/1.5em;
+}
+
+#bonus-items {
+  display: grid;
+  grid-auto-flow: row dense;
+  row-gap: 1em;
+  justify-content: space-evenly;
+  grid-template: repeat(2, 1fr)/repeat(3, 1fr);
+  max-width: 1500px;
+  margin: auto;
+}
+@media screen and (max-width: 480px) {
+  #bonus-items {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #bonus-items {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+}
+#bonus-items li {
+  box-sizing: border-box;
+  width: 90%;
+  margin: auto;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  padding: 3em 2em;
+  border-radius: 15px;
+  background: #0d4a81;
+  box-shadow: 0 5px 15px -4px #0b3d6a;
+  color: #f5f5f5;
+  font-family: "Comfortaa";
+  position: relative;
+}
+#bonus-items li:before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  content: "";
+  background: url(https://api.iconify.design/entypo:price-ribbon.svg?color=%23f5f5f5) no-repeat -2em 1em/contain;
+  z-index: 0;
+  opacity: 0.1;
+}
+#bonus-items li span {
+  text-align: center;
+  line-height: 120%;
+  position: relative;
+  z-index: 1;
+}
+
+#investiment-container span {
+  display: block;
+  text-align: center;
+  font-family: "Poppins";
+  font-size: 0.9rem;
+  position: relative;
+  box-sizing: border-box;
+  padding: 0 25px;
+}
+
+#investiment-container .price-inactive {
+  text-decoration: line-through;
+  color: #FF0000;
+  margin: 7px 0;
+  font-size: 0.9rem;
+}
+
+#investiment-container .price-active {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #008000;
+  margin: 15px 0;
+}
+
+#investiment-container .launch-promotion {
+  background: #1265af;
+  color: white;
+  letter-spacing: 1px;
+  padding: 10px 0;
+  box-shadow: 0 10px 15px -9px #222;
+  font-family: "Poppins";
+  font-variant: all-small-caps;
+  font-size: 0.9rem;
+  max-width: 500px;
+  margin: auto;
+}
+
+#disclaimer-container {
+  position: relative;
+  margin-bottom: -1px;
+}
+#disclaimer-container .panel-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background: #0d4a81;
+  color: #f5f5f5;
+  box-shadow: 0 10px 25px -9px #222;
+}
+#disclaimer-container .panel {
+  padding: 3em 5em;
+  text-align: center;
+  font-size: 0.9rem;
+  flex-basis: 50%;
+  box-sizing: border-box;
+  line-height: 130%;
+  min-height: 180px;
+  align-items: center;
+  display: flex;
+  font-family: "Poppins";
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 1;
+}
+#disclaimer-container .panel:not(:last-of-type) {
+  background: #1472c6;
+}
+#disclaimer-container .panel:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  position: absolute;
+  opacity: 0.2;
+  z-index: -1;
+}
+#disclaimer-container #panel-warning:after {
+  background: url("https://api.iconify.design/carbon:warning-hex-filled.svg?color=%230d4a81") no-repeat -2em center/contain;
+}
+#disclaimer-container #panel-health-professional:after {
+  background: url("https://api.iconify.design/maki:doctor-15.svg?color=%231472c6&flip=horizontal") no-repeat -2em center/contain;
+}
+@media screen and (max-width: 768px) {
+  #disclaimer-container .panel-container {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 769px) {
+  #disclaimer-container .panel-container {
+    flex-direction: column;
+    max-width: 700px;
+    margin: 2em auto 5em auto;
+  }
+}
+
+#callout-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  width: max-content;
+  text-align: center;
+  padding: 5em 0;
+}
+#callout-banner span {
+  margin-bottom: 20px;
+  font-family: "Poppins";
+  font-size: 1.4rem;
+  color: #0d4a81;
+  font-variant: all-small-caps;
+}
+
+.iframe-container-width {
+  max-width: 1000px;
+  margin: 2em auto;
+  display: grid;
+  grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+  grid-auto-flow: dense;
+  position: relative;
+  grid-gap: 10px;
+}
+@media screen and (max-width: 767px) {
+  .iframe-container-width {
+    width: 75%;
+    grid-template: auto/1fr;
+  }
+}
+@media screen and (min-width: 768px) {
+  .iframe-container-width {
+    grid-auto-flow: dense;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .iframe-container-width {
+    grid-template: 1fr/repeat(3, 1fr);
+  }
+}
+
+.iframe-video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  box-shadow: 0px 10px 25px -15px #010000;
+}
+
+.iframe-video-container iframe, .iframe-video-container object, .iframe-video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.iframe-video-container .ytp-impression-link {
+  display: none !important;
+}
+
+/*# sourceMappingURL=mentoria.css.map */
