@@ -11,7 +11,7 @@
         </h2>
 
         <a href="<?php echo $_ENV['PRODUCT_URL']; ?>" target="_blank" rel="norel nofollow">
-            <button class="button-sales-callout">RESERVAR MINHA VAGA NA MENTORIA</button>
+            <button class="button-sales-callout">RESERVAR MINHA VAGA NO TREINAMENTO</button>
         </a>
     </div>
 

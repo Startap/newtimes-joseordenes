@@ -3,7 +3,7 @@ $faqItemsToRender = [];
 $faqItems = [
     [
         'question' => 'Afinal, o que é o curso e para que serve?',
-        'answer' => 'É uma mentoria. Nossa meta é ajudar você a se desenvolver e conseguir prospectar mais clientes, aumetando seu faturamento como jovem advogado autônomo.'
+        'answer' => 'É um treinamento. A intenção é ajudar você a ser mais efetivo no seu tratamento e, por consequência, aumentar seus atendimentos e eficácia.'
     ],
     [
         'question' => 'Como eu posso me inscrever?',
