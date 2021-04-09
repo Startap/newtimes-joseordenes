@@ -603,6 +603,11 @@ a {
   color: #0d4a81;
 }
 
+#investiment-container a { 
+    margin: auto !important;
+    display: block;
+}
+
 #disclaimer-container {
   position: relative;
   margin-bottom: -1px;
