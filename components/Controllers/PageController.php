@@ -13,4 +13,8 @@ class PageController extends ApplicationController
     {
         $this->renderViewport(['website/obrigado']);
     }
+
+    public function getMentoria() {
+        $this->renderViewport(['website/mentoria']);
+    }
 }

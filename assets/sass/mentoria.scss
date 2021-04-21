@@ -1,0 +1,824 @@
+$fontPrimary: "Poppins";
+$fontSansSerifRounded: "Comfortaa";
+
+$colorPrimary: #0d4a81;
+$colorSecondary: rgb(13, 74, 129);
+$colorLight: #f5f5f5;
+$colorAccent: #56d6ec;
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+strong,
+b {
+    display: inline;
+    font-weight: bold;
+}
+
+a {
+    width: fit-content;
+}
+
+.button-sales-callout {
+    box-sizing: border-box;
+    width: max-content;
+    font-weight: bold;
+    font-family: $fontPrimary;
+    cursor: pointer;
+    padding: 1em 3em;
+    border-radius: 15px;
+    border: none;
+    line-height: 120%;
+    font-size: 1.2rem;
+    background: #ffff3e;
+    color: $colorPrimary;
+    overflow-x: hidden;
+    position: relative;
+    box-shadow: 0 6px 20px -10px #222222 !important;
+    transition: all 0.4s ease-in-out;
+
+    &:hover {
+        box-shadow: 0 10px 50px -10px #222222 !important;
+
+        &:after {
+            left: 100%;
+        }
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+        transform: matrix(1, 0, -0.700208, 1, 0, 0);
+        transition: all 0.5s ease;
+    }
+
+    @media screen and (max-width: 480px) {
+        width: 100%;
+    }
+}
+
+.content-section {
+    h1 {
+        font-family: $fontPrimary;
+        font-variant: all-small-caps;
+        font-size: 1.9rem;
+        text-align: center;
+        margin: 3em auto 1em auto;
+        font-weight: 600;
+        letter-spacing: 1px;
+        position: relative;
+        width: fit-content;
+        color: $colorPrimary;
+        cursor: default;
+
+        &::before {
+            content: "";
+            width: 3em;
+            height: 3em;
+            left: 0;
+            position: absolute;
+            background: url("https://api.iconify.design/maki:doctor-15.svg?color=%230d4a81&flip=horizontal") no-repeat
+                left center;
+            background-size: 2em;
+            opacity: 0.3;
+            transition: all 0.3s ease;
+
+            @media screen and (max-width: 769px) {
+                display: none;
+            }
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 50%;
+            left: 0;
+            bottom: -9px;
+            background: $colorPrimary;
+            height: 5px;
+            border-radius: 15px;
+            opacity: 0.2;
+            transition: all 0.3s ease;
+        }
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+
+            &::before {
+                opacity: 0.2;
+            }
+        }
+
+        @media screen and (min-width: 769px) {
+            &::before {
+                left: -2em;
+                top: -1em;
+                opacity: 0.3;
+            }
+
+            &:hover::after {
+                width: 80%;
+            }
+
+            &:hover::before {
+                opacity: 0.6;
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    h2 {
+        font-family: $fontSansSerifRounded;
+        text-align: center;
+        max-width: 600px;
+        margin: 1em auto 1em auto;
+        font-weight: bold;
+        font-size: 1.2em;
+
+        @media screen and (max-width: 768px) {
+            font-size: 1em;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+    }
+}
+
+#first_callout {
+    height: fit-content;
+    min-height: 100vh;
+    padding: 2em 1em;
+    color: #f5f5f5;
+    box-sizing: border-box;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: relative;
+    z-index: 0;
+
+    &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
+        opacity: 0.9;
+        background: $colorPrimary;
+        z-index: -1;
+    }
+
+    &:after {
+        content: "";
+        background-blend-mode: luminosity;
+        background: $colorPrimary url("/assets/images/illustrations/clinic-background.png") no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
+        opacity: 1;
+        z-index: -2;
+    }
+
+    h1,
+    h2 {
+        margin-bottom: 2rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+        font-family: $fontSansSerifRounded;
+        text-shadow: 1px 1px 1px #062d50;
+        font-weight: 700;
+
+        span {
+            text-transform: uppercase;
+            display: block;
+            text-shadow: 4px 2px 0px darken($colorPrimary, 10%);
+        }
+
+        small {
+            font-size: 1.5rem;
+            display: block;
+            font-family: $fontSansSerifRounded;
+        }
+    }
+
+    h2 {
+        font-size: 1.2em;
+        line-height: 130%;
+        font-family: $fontSansSerifRounded;
+
+        span {
+            color: $colorAccent;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        h1 small {
+            margin-top: 10px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        h1 small {
+            width: 75%;
+            max-width: 1000px;
+        }
+
+        h2 {
+            width: 60%;
+            max-width: 700px;
+        }
+    }
+
+    .left-section,
+    .right-section {
+        flex-basis: 49%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-sizing: border-box;
+
+        @media screen and (max-width: 500px) {
+            flex-basis: 100%;
+            margin-bottom: 2em;
+        }
+    }
+}
+
+#targets-container {
+    display: grid;
+    grid-template-areas: "title title" "illustration text";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: max-content 1fr;
+
+    h1 {
+        grid-area: title;
+    }
+
+    #target-illustration {
+        grid-area: illustration;
+    }
+
+    #target-item {
+        grid-area: text;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        p {
+            font-size: 1.3em;
+            font-family: $fontPrimary;
+            font-weight: normal;
+            line-height: 150%;
+            color: $colorPrimary;
+            padding: 0 2em;
+            position: relative;
+            z-index: 0;
+
+            &:after {
+                position: absolute;
+                content: "";
+                width: 60%;
+                height: 10px;
+                background: linear-gradient(90deg, $colorPrimary, $colorAccent);
+                left: 2em;
+                bottom: -1em;
+                border-radius: 15px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+#course-modules-container {
+    padding: 1em 0 2em 0;
+}
+
+#course-cards-wrapper {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(3, 1fr);
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    max-width: 1500px;
+    grid-row-gap: 1em;
+    padding-bottom: 20em;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+
+    &:after {
+        content: "";
+        width: 180%;
+        height: 250%;
+        bottom: 0;
+        right: 0;
+        background: url("/assets/images/illustrations/clinic-physio.svg") no-repeat center center/contain;
+        margin-top: 30px;
+        position: relative;
+        filter: drop-shadow(3px 7px 50px #00000040);
+    }
+
+    @media screen and (max-width: 750px) {
+        grid-template-columns: 1fr;
+        padding-bottom: 0;
+
+        &:after {
+            width: 100%;
+            height: 20em;
+        }
+    }
+
+    @media screen and (min-width: 751px) and (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .title {
+        font-variant: all-small-caps;
+    }
+}
+
+// Draw flip card for modules
+#course-cards-wrapper .card {
+    background: transparent;
+    width: 90%;
+    height: 250px;
+    perspective: 1000px;
+    border-radius: 10px;
+    margin: auto;
+
+    .flip-card {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.4s linear;
+        transform-origin: center center;
+        transform-style: preserve-3d;
+        border-radius: 10px;
+
+        .card__side--front,
+        .card__side--back {
+            position: absolute;
+            overflow-x: hidden;
+            height: 100%;
+            width: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 0 10px;
+            box-shadow: 0 5px 10px -5px darken($colorPrimary, 5%);
+
+            &:after {
+                position: absolute;
+                left: -10px;
+                top: 10px;
+                overflow: hidden;
+                content: attr(data-key);
+                font-family: $fontSansSerifRounded;
+                font-size: 10rem;
+                color: $colorLight;
+                opacity: 10%;
+                text-align: left;
+                transform: skew(-10deg, 0deg);
+            }
+        }
+
+        .card__side--front {
+            color: $colorLight;
+            background: $colorPrimary;
+            background: linear-gradient(45deg, #0d3a81 0%, #0d5281 100%);
+        }
+
+        .card__side--back {
+            color: $colorPrimary;
+            background: #d5eaea;
+            transform: rotateY(180deg);
+
+            &:after {
+                color: $colorPrimary;
+            }
+        }
+    }
+
+    &:hover .flip-card {
+        transform: rotateY(180deg) scale(1.05);
+
+        .card__side--back,
+        .card__side--front {
+            box-shadow: 0 7px 15px -5px darken($colorPrimary, 5%);
+        }
+    }
+
+    p.short-description,
+    p.long-description {
+        line-height: 120%;
+        padding: 2em 45px;
+        font-family: "Poppins";
+        box-sizing: border-box;
+        font-weight: 400;
+        font-size: 1em;
+    }
+
+    p.long-description {
+        font-size: 0.9rem;
+    }
+}
+
+#instructor-container #perfil-profissional {
+    margin-top: 0;
+
+    #about-profissional {
+        max-width: 500px;
+    }
+
+    p#name-profissional {
+        font-size: 1.5em;
+        line-height: 130%;
+    }
+
+    @media screen and (max-width: 769px) {
+        #photo-perfil {
+            margin-bottom: 1em;
+        }
+
+        #right-2,
+        #about-profissional {
+            margin: auto;
+        }
+
+        #name-profissional {
+            text-align: center;
+        }
+    }
+}
+
+#testimonial-container h2 {
+    font-family: "Poppins";
+    font-weight: normal;
+    font-size: 1em;
+}
+
+#faq-items-wrapper {
+    $faqClosedIcon: "/assets/images/faq_open.svg";
+    $faqOpenedIcon: "/assets/images/faq_close.svg";
+    $faqHoveredIcon: "/assets/images/faq_hovered.svg";
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: 769px) {
+        width: 90%;
+        margin: auto;
+    }
+
+    .faq-card {
+        box-sizing: border-box;
+        max-width: 700px;
+        margin: 0 auto;
+        border-radius: 5px 50px 0 0;
+
+        &:not(:last-of-type) {
+            margin-bottom: 1em;
+        }
+
+        &:hover {
+            .faq-question span::before {
+                background: url($faqHoveredIcon) no-repeat left center / 1.5em;
+            }
+        }
+    }
+
+    .faq-question {
+        box-sizing: border-box;
+        font-family: "Comfortaa";
+        font-weight: bold;
+        background: linear-gradient(45deg, #062d50 60%, #0d5281 200%);
+        //$colorPrimary;
+        padding: 1em 2em 1em 3em;
+        color: white;
+        font-size: 0.9em;
+        cursor: help;
+
+        span {
+            position: relative;
+            display: block;
+
+            &:before {
+                position: absolute;
+                content: "";
+                width: 2em;
+                height: 2em;
+                background: url($faqClosedIcon) no-repeat left center / 1.5em;
+                left: -2.3em;
+                top: -0.5em;
+                transition: all 0.4s ease-in-out;
+                transform-origin: center center;
+            }
+        }
+    }
+
+    .faq-answer {
+        box-sizing: border-box;
+        cursor: default;
+
+        max-height: 0;
+        overflow: hidden;
+
+        border: 3px solid #0d4a81;
+        border-top: none;
+        font-family: "Poppins";
+        font-size: 0.9em;
+        line-height: 150%;
+        transition: all 0.3s ease-in-out;
+
+        span {
+            padding: 1em;
+            display: block;
+            box-sizing: border-box;
+        }
+    }
+
+    .faq-opened {
+        .faq-question {
+            left: 1em;
+        }
+
+        .faq-question span::before {
+            background: url($faqOpenedIcon) no-repeat left center / 1.5em;
+        }
+
+        &:hover {
+            .faq-question span::before {
+                background: url($faqOpenedIcon) no-repeat left center / 1.5em;
+            }
+        }
+    }
+}
+
+#bonus-items {
+    display: grid;
+    grid-auto-flow: row dense;
+    row-gap: 1em;
+    justify-content: space-evenly;
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    max-width: 1500px;
+    margin: auto;
+
+    @media screen and (max-width: 480px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    @media screen and (max-width: 1024px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    li {
+        box-sizing: border-box;
+        width: 90%;
+        margin: auto;
+        height: 100%;
+        align-items: center;
+        display: flex;
+        padding: 3em 2em;
+        border-radius: 15px;
+        background: $colorPrimary;
+        box-shadow: 0 5px 15px -4px darken($colorPrimary, 5%);
+        color: $colorLight;
+        font-family: $fontSansSerifRounded;
+        position: relative;
+
+        &:before {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            content: "";
+            background: url(https://api.iconify.design/entypo:price-ribbon.svg?color=%23f5f5f5) no-repeat -2em 1em / contain;
+            z-index: 0;
+            opacity: 0.1;
+        }
+    }
+
+    li span {
+        text-align: center;
+        line-height: 120%;
+        position: relative;
+        z-index: 1;
+    }
+}
+
+#investiment-container span {
+    display: block;
+    text-align: center;
+    font-family: $fontPrimary;
+    position: relative;
+    box-sizing: border-box;
+    padding: 0 25px;
+    color: $colorPrimary;
+}
+
+#investiment-container .price-inactive {
+    text-decoration: line-through;
+    color: #ff0000;
+    margin: 7px 0;
+    font-size: 0.9rem;
+}
+
+#investiment-container .price-active {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #008000;
+    margin: 15px 0;
+}
+
+#investiment-container .launch-promotion {
+    background: #ffff3e;
+    color: $colorPrimary;
+    letter-spacing: 1px;
+    padding: 10px 0;
+    font-family: $fontPrimary;
+    font-variant: all-small-caps;
+    font-size: 1.2rem;
+    font-weight: bold;
+    max-width: 500px;
+    margin: 2em auto;
+}
+
+#investiment-container .promotion-time-limited {
+    display: block;
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 0em 0 2em 0;
+    font-variant: all-small-caps;
+    font-family: $fontPrimary;
+    font-weight: bold;
+    color: $colorPrimary;
+}
+
+#disclaimer-container {
+    position: relative;
+    margin-bottom: -1px;
+
+    .panel-container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        background: $colorPrimary;
+        color: $colorLight;
+        box-shadow: 0 10px 25px -9px #222;
+    }
+
+    .panel {
+        padding: 3em 5em;
+        text-align: center;
+        font-size: 0.9rem;
+        flex-basis: 50%;
+        box-sizing: border-box;
+        line-height: 130%;
+        min-height: 180px;
+        align-items: center;
+        display: flex;
+
+        font-family: $fontPrimary;
+        letter-spacing: 1px;
+        position: relative;
+        z-index: 1;
+
+        &:not(:last-of-type) {
+            background: #1472c6;
+        }
+
+        &:hover:after {
+            background-position: 100% center;
+            transform: skewX(-10deg);
+            transform-origin: right top;
+            opacity: 0.0;
+        }
+
+        &:after {
+            transition: all .5s ease-in-out;
+            content: "";
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            box-sizing: border-box;
+            position: absolute;
+            opacity: 0.2;
+            z-index: -1;
+            background-repeat: no-repeat;
+            background-position: -10% center;
+            background-size: contain;
+        }
+    }
+
+    #panel-warning:after {
+        background-image: url("https://api.iconify.design/carbon:warning-hex-filled.svg?color=%230d4a81");
+    }
+
+    #panel-health-professional:after {
+        background-image: url("https://api.iconify.design/maki:doctor-15.svg?color=%231472c6&flip=horizontal");
+    }
+
+    @media screen and (max-width: 768px) {
+        .panel-container {
+            flex-direction: column;
+        }
+    }
+
+    @media screen and (min-width: 769px) {
+        .panel-container {
+            flex-direction: column;
+            max-width: 700px;
+            margin: 2em auto 5em auto;
+        }
+    }
+}
+
+#callout-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: max-content;
+    text-align: center;
+    padding: 5em 0;
+
+    @media screen and (max-width: 480px) {
+        width: 90%;
+    }
+
+    span {
+        margin-bottom: 20px;
+        font-family: $fontPrimary;
+        font-size: 1.4rem;
+        color: $colorPrimary;
+        font-variant: all-small-caps;
+    }
+
+    a {
+        margin: auto;
+    }
+}
+
+.iframe-container-width {
+    max-width: 1200px;
+    margin: 2em auto;
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    grid-auto-flow: dense;
+    position: relative;
+    grid-gap: 10px;
+
+    @media screen and (max-width: 767px) {
+        width: 75%;
+        grid-template: auto / 1fr;
+    }
+    @media screen and (min-width: 768px) {
+        grid-auto-flow: dense;
+    }
+    @media screen and (min-width: 1024px) {
+        grid-template: 1fr / repeat(3, 1fr);
+    }
+}
+
+.iframe-video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    box-shadow: 0px 10px 25px -15px #010000;
+}
+
+.iframe-video-container iframe,
+.iframe-video-container object,
+.iframe-video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.iframe-video-container .ytp-impression-link {
+    display: none !important;
+}
