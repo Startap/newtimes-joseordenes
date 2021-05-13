@@ -16,17 +16,26 @@ jobs:
       uses: actions/cache@v2
       with:
         path: vendor
-        key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+        key: |
+          ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
         restore-keys: |
           ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
 
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress --no-suggest --no-dev
+      
+    - name: Compile SASS styles
+      uses: gha-utilities/sass-build@v.0.3.9
+      with:
+        source: assets/sass/mentoria.scss
+        destination: assets/mentoria.css
+        outputStyle: "compressed"
+        sourceMap: false
 
-    - name: Copy files to SSH server
+    - name: Deploy files via SCP to server
       uses: nogsantos/scp-deploy@master
       with:
-        src: './assets ./components ./vendor ./views index.php routes.php'
+        src: './assets/images ./assets/*.css ./assets/*.js ./components ./vendor ./views index.php routes.php'
         remote: ${{ secrets.SSH_PATH }}
         host: ${{ secrets.SSH_HOSTNAME }}
         user: ${{ secrets.SSH_USERNAME }}
