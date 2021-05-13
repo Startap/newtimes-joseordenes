@@ -17,20 +17,23 @@
         <p id="description-icon-1">Aulas ao vivo</p>
     </div>
 
-    <h1 id="title-1">SEMANA FISIOTERAPEUTA EXPERT</p>
-        <h2 id="subtitle-1">
-            Domine a Terapia Manual sendo mais efetivo nos seus tratamentos e aumente em até 3x seu faturamento
-        </h2>
+    <h1 id="title-1">SEMANA DO <br>FISIOTERAPEUTA EXPERT</h1>
+    <h2 id="subtitle-1">
+        Domine a Terapia Manual, seja mais efetivo nos seus tratamentos e aumente em até 3x seu faturamento
+    </h2>
 
-        <div id="form">
-            <div id="form__callout">
-                <h3>GRATUITO - De 05 a 09 de abril</h3>
-                <span>Para participar, preencha os campos abaixo e, em seguida, siga as instruções para entrar no Grupo Vip e ter acesso às aulas</span>
-            </div>
-
-            <div role="main" id="newtimes-formulario-leads-page-9cc80504cb28de1971aa">
-            </div>
+    <div id="form">
+        <div id="form__callout">
+            <h3><span class="iconify" data-icon="bi:calendar-check-fill"></span>07 a 10 de junho</h3>
+            <span>
+                <b>GRATUITO</b>, basta se inscrever, entrar para os grupos VIP e
+                participar das aulas online!
+            </span>
         </div>
+
+        <div role="main" id="newtimes-formulario-leads-page-9cc80504cb28de1971aa">
+        </div>
+    </div>
 </section>
 
 <section id="background-2">

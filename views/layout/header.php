@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
 
@@ -15,6 +16,8 @@
     <link rel="stylesheet" href="/assets/reset.css">
     <link rel="stylesheet" href="/assets/app.css">
     <link rel="stylesheet" href="/assets/mentoria.css">
+
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 </head>
 
 <body>
