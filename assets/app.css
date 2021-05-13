@@ -17,7 +17,7 @@ body {
 
 #background-1 {
   display: block;
-  height: fit-content;
+  padding-bottom: 5rem;
   min-height: 100vh;
   width: 100%;
   position: relative;
@@ -85,6 +85,7 @@ body {
   background: white;
   padding: 0.5em 0;
   box-shadow: 0 5px 15px -10px #222;
+  text-shadow: 1px 1px #0d4a81;
 }
 
 #subtitle-1 {
@@ -96,7 +97,7 @@ body {
   text-align: center;
   color: #f5f5f5;
   max-width: 700px;
-  margin: auto;
+  margin: 3rem auto 4rem auto;
 }
 
 #subtitle-1::after {
@@ -122,7 +123,7 @@ body {
 
 #form {
   max-width: 450px;
-  margin: 2em auto 2.5em auto;
+  margin: 2em auto 0 auto;
   background: white;
   box-sizing: border-box;
   border-radius: 6px;
@@ -151,34 +152,26 @@ section #objects-1, section #objects-2 {
   margin: auto;
   align-items: center;
   position: relative;
-  gap: 40px;
+  gap: 6rem;
 }
 
 section #objects-1 {
   flex-direction: row-reverse;
+  margin-bottom: 4rem;
 }
 
 section #objects-2 {
   flex-direction: row;
 }
 
-.title-global-1 {
+.title-global-1, .title-global-2 {
   font-family: Comfortaa;
   font-style: normal;
   font-weight: bold;
-  font-size: 27px;
-  line-height: 27px;
   color: #0d4a81;
-  width: 100%;
-}
-
-.title-global-2 {
-  font-family: Comfortaa;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 27px;
-  line-height: 27px;
-  color: #0d4a81;
+  font-size: 2rem;
+  line-height: 100%;
+  margin-bottom: 1rem;
 }
 
 .text-global-1 {
@@ -386,7 +379,7 @@ p#about-profissional {
   flex-direction: column;
   justify-content: center;
   padding: 0 2em;
-  max-width: 800px;
+  max-width: 30rem;
 }
 
 footer {
@@ -447,6 +440,14 @@ p#subtitle-footer {
   margin: 2% auto auto auto;
 }
 
+#btn, #rd-form-kl02258v button  {
+  transition: all .3s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+#btn:hover, #rd-form-kl02258v button:hover  {
+  letter-spacing: 4px;
+}
+
 footer {
   background: #0d4a81;
   width: 100%;
@@ -502,7 +503,7 @@ footer {
 }
 
 #rd-form-kl02258v .bricks-form__label {
-  font-size: 0.8em;
+  font-size: 0.8em !important;
   font-family: Poppins, Arial !important;
   color: #222 !important;
   text-align: left;
@@ -629,13 +630,28 @@ footer {
   text-transform: uppercase;
   font-family: Poppins;
   font-weight: bold;
+  font-size: 1.3rem;
   margin-top: 10px;
   margin-bottom: 15px;
   color: #0d4a81;
   position: relative;
+  animation: animationDate 2s cubic-bezier(0.23, 1, 0.320, 1) infinite alternate-reverse;
 }
 
-#form__callout h3::after {
+#form__callout h3 svg {
+  margin-right: 1rem;
+}
+
+@keyframes animationDate {
+  from {
+    letter-spacing: 0px;
+  }
+  to {
+    letter-spacing: 4px;
+  }
+}
+
+/* #form__callout h3::after {
   position: absolute;
   content: "";
   width: 100%;
@@ -645,12 +661,14 @@ footer {
   box-sizing: border-box;
   display: block;
   bottom: -5px;
-}
+} */
 
 #form__callout span {
   font-family: Poppins;
-  font-size: 0.8em;
+  font-size: 1rem;
   font-weight: normal;
+  display: block;
+  text-align: center;
 }
 
 #thanks__title, #section__social_network {

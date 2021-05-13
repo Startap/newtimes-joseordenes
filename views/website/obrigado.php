@@ -6,6 +6,13 @@
  * framework it's not needed to import every php file to build header and footer. 
  * Our backend already do this.
  */
+
+if (isset($_ENV['WHATSAPP_URL'])) {
+    $waUrl = $_ENV['WHATSAPP_URL'];
+} else {
+    $waUrl = 'https://chat.whatsapp.com/CHcqmTOoRML1YYs5TZbhEi';
+}
+
 ?>
 
 
@@ -26,7 +33,7 @@
             </div>
         </a>
 
-        <a href="https://chat.whatsapp.com/CHcqmTOoRML1YYs5TZbhEi" class="social_network_card" target="_blank" rel="nofollow norel">
+        <a href="<?php echo $waUrl; ?>" class="social_network_card" target="_blank" rel="nofollow norel">
             <div>
                 <img src="/assets/images/social_icons/whatsapp.svg" alt="Ícone de rede social - WhatsApp" />
                 Participe do nosso grupo de WhatsApp
